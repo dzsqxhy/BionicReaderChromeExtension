@@ -1,11 +1,11 @@
 let isEnabled = false;
-let focusLength = 2;
+let focusLength = 1;
 let isDarkMode = false;
 let isDarkMode2 = false;
 
 chrome.storage.sync.get(["isEnabled", "focusLength", "isDarkMode", "isDarkMode2"], ({ isEnabled: savedIsEnabled, focusLength: savedFocusLength, isDarkMode: savedIsDarkMode, isDarkMode2: savedIsDarkMode2 }) => {
   isEnabled = savedIsEnabled;
-  focusLength = savedFocusLength || 2;
+  focusLength = savedFocusLength ||1; //注意字符数
   isDarkMode = savedIsDarkMode || false;
   isDarkMode2 = savedIsDarkMode2 || false;
   if (isEnabled) {
@@ -110,14 +110,17 @@ function applyBionicReading(textNode) {
     } else {
       let bionicWord = "";
       const characters = word.split('');
-
+      let realFlenth = parseInt(focusLength)||1;
       characters.forEach((char, index) => {
-        if (index === 0 || (index < focusLength && word.length > focusLength)) {
-          bionicWord += `<span class="bionic-primary">${char}</span>`;
-        } else if (index === Math.floor(word.length / 2)) {
-          bionicWord += `<span class="bionic-secondary">${char}</span>`;
-        } else {
+        if (/^[a-zA-Zа-яА-ЯёЁ]$/.test(char)) { //如果是英语或者俄语字符
+		  if (index < realFlenth){
+		    bionicWord += `<span class="bionic-primary">${char}</span>`;}
+		  else {
+            bionicWord += char;}
+		}
+        else { //不是的话就视为符号+1
           bionicWord += char;
+		  realFlenth += 1;
         }
       });
 

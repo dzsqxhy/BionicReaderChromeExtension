@@ -33,5 +33,5 @@
 本扩展仅支持用于对英语及俄语的阅读。
 
 ## 支持和贡献
-本扩展项目Fork于[该 GitHub项目](https://github.com/edwardsaunders7/BionicReaderChromeExtension/issues)。
-如果您遇到任何问题或想要提出改进建议,请在 GitHub 上[打开一个issue](https://github.com/edwardsaunders7/BionicReaderChromeExtension/issues)。
+本扩展项目Fork于[该 GitHub项目](https://github.com/edwardsaunders7/BionicReaderChromeExtension)。
+如果您遇到任何问题或想要提出改进建议,请在 GitHub 上[打开一个issue](https://github.com/dzsqxhy/BionicReaderChromeExtension/issues)。

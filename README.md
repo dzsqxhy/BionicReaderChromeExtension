@@ -1,33 +1,37 @@
-# Bionic Reading Extension
+# 仿生阅读 Chrome 扩展
 
-Enhance your reading experience with Bionic Reading. This Chrome extension applies the Bionic Reading technique to the text on web pages, making it easier to read and process information.
+使用仿生阅读功能提升您的阅读体验。此 Chrome 扩展将仿生阅读技术应用于网页上的文本,使其更易于阅读和处理信息。
 
-## Installation
+## 安装
 
-Follow these steps to install the Bionic Reading extension manually:
+按照以下步骤手动安装仿生阅读扩展:
 
-### Step 1: Download the extension files
+### 步骤 1: 下载扩展文件
 
-- Click the green "Code" button on the repository's main page, then click "Download ZIP" to download the extension files as a ZIP archive.
-- Extract the contents of the ZIP file to a folder on your computer.
+- 点击存储库主页上的绿色"代码"按钮,然后点击"下载 ZIP"以将扩展文件下载为 ZIP 档案。
+- 将 ZIP 文件的内容解压缩到您电脑上的一个文件夹中。
 
-### Step 2: Load the extension in Chrome
+### 步骤 2: 在 Chrome 中加载扩展
 
-- Open the Google Chrome browser.
-- Navigate to the Extensions page by clicking the three-dot menu in the top-right corner, selecting "More tools," and then "Extensions."
-- Enable "Developer mode" by toggling the switch in the top-right corner of the Extensions page.
-- Click the "Load unpacked" button, navigate to the folder containing the extracted extension files, and select the folder.
+- 打开 Google Chrome 浏览器。
+- 通过单击右上角的三点菜单,选择"更多工具"和"扩展程序"来导航到扩展页面。
+- 通过切换扩展页面右上角的开关来启用"开发者模式"。
+- 单击"加载解压缩的扩展"按钮,导航到包含已提取扩展文件的文件夹,然后选择该文件夹。
 
-The Bionic Reading extension is now installed and ready to use.
+仿生阅读扩展现已安装并准备使用。
 
-## Usage
+## 使用
 
-To use the Bionic Reading extension:
+要使用仿生阅读扩展:
 
-1. Click on the extension icon in the Chrome toolbar to open the popup.
-2. Toggle the "Activate Bionic Reading" switch to enable or disable the Bionic Reading effect on the current web page.
-3. Adjust the "Focus Length" slider to change the length of bolding in the text.
+1. 单击 Chrome 工具栏中的扩展图标以打开弹出窗口。
+2. 切换"启用仿生阅读"开关以在当前网页上启用或禁用仿生阅读效果。
+3. 调整"聚焦长度"滑块以更改文本中加粗的长度。
 
-## Support and Contribution
+## 注意事项
 
-If you encounter any issues or would like to suggest improvements, please [open an issue](https://github.com/edwardsaunders7/BionicReaderChromeExtension/issues) on GitHub. Contributions are welcome, and you can submit a pull request with your changes.
+本扩展仅支持用于对英语及俄语的阅读。
+
+## 支持和贡献
+本扩展项目Fork于[该 GitHub项目](https://github.com/edwardsaunders7/BionicReaderChromeExtension/issues)。
+如果您遇到任何问题或想要提出改进建议,请在 GitHub 上[打开一个issue](https://github.com/edwardsaunders7/BionicReaderChromeExtension/issues)。

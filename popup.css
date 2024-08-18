@@ -1,10 +1,15 @@
-body {
+body {  
+  background-color: white;  
+  color: black;
   font-family: Arial, sans-serif;
   margin: 10px;
-}
+}  
 
 h1 {
   font-size: 24px;
+  white-space: nowrap;  
+  overflow: hidden;  
+  text-overflow: ellipsis;
 }
 
 label {
@@ -42,4 +47,18 @@ input[type="checkbox"]:before {
 
 input[type="checkbox"]:checked:before {
   left: 16px;
+}
+
+/* 暗黑模式下的样式 */  
+@media (prefers-color-scheme: dark) {  
+  body {  
+    background-color: black;  
+    color: #708090;  
+  }
+  input[type="checkbox"]:checked {
+    background-color: #0E5298;
+  }
+  input[type="checkbox"]:before {
+    background-color: #708090;
+  }
 }

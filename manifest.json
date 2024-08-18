@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Bionic Reading Extension",
+  "name": "仿生阅读扩展",
   "version": "3.0",
-  "description": "Enhance your reading experience with Bionic Reading, now with Dark Mode",
+  "description": "使用仿生阅读增强你的阅读体验，适配暗黑模式",
   "icons": {
     "48": "icon.png"
   },

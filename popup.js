@@ -33,20 +33,37 @@ focusLength.addEventListener("input", () => {
   });
 });
 
-darkModeToggle.addEventListener("change", () => {
-  const isDarkMode = darkModeToggle.checked;
-  chrome.storage.sync.set({ isDarkMode });
+//两按钮功能互斥，所以一开则另一关
+darkModeToggle.addEventListener("change", () => {  
+  const isDarkMode = darkModeToggle.checked;  
+  chrome.storage.sync.set({ isDarkMode });  
 
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id, { action: "toggleDarkMode", isDarkMode });
-  });
-});
+  if (isDarkMode && darkModeToggle2.checked) {  
+    darkModeToggle2.checked = false;  
+    chrome.storage.sync.set({ isDarkMode2: false });  
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {  
+      chrome.tabs.sendMessage(tabs[0].id, { action: "toggleDarkMode2", isDarkMode2: false });  
+    });  
+  }  
 
-darkModeToggle2.addEventListener("change", () => {
-  const isDarkMode2 = darkModeToggle2.checked;
-  chrome.storage.sync.set({ isDarkMode2 });
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {  
+    chrome.tabs.sendMessage(tabs[0].id, { action: "toggleDarkMode", isDarkMode });  
+  });  
+});  
 
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id, { action: "toggleDarkMode2", isDarkMode2 });
-  });
-});
+darkModeToggle2.addEventListener("change", () => {  
+  const isDarkMode2 = darkModeToggle2.checked;  
+  chrome.storage.sync.set({ isDarkMode2 });  
+
+  if (isDarkMode2 && darkModeToggle.checked) {  
+    darkModeToggle.checked = false;  
+    chrome.storage.sync.set({ isDarkMode: false });  
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {  
+      chrome.tabs.sendMessage(tabs[0].id, { action: "toggleDarkMode", isDarkMode: false });  
+    });  
+  }  
+
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {  
+    chrome.tabs.sendMessage(tabs[0].id, { action: "toggleDarkMode2", isDarkMode2 });  
+  });  
+});  
